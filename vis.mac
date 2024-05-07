@@ -1,0 +1,12 @@
+/run/initialize
+/vis/open OGL
+/vis/viewer/set/viewpointVector 1 1 1
+/vis/drawVolume
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByCharge
+/vis/viewer/set/autoRefresh true
+/vis/geometry/set/colour pixelLogic 0 1 1 0
+/vis/geometry/set/colour targetLogic 0 1 0 1
+/vis/geometry/set/lineStyle worldLogic 0 dashed
+/vis/verbose warnings
+#/run/beamOn 1
