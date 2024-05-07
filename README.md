@@ -1,4 +1,6 @@
-# Geant4 Simvue Example
+# Geant4 Example
+
+![g4_demo](./img/G4_vis.png)
 
 This example makes use of the _Geant4_ particle-material interaction framework. In this scenario a proton beam is fired against a target of Beryllium.
 
