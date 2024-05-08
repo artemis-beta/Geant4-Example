@@ -1,0 +1,14 @@
+[particle_gun]
+particle = "proton"
+momentum = 100
+n_per_event = 1
+z_offset = -1.9
+
+[physics]
+physics_list = "FTFP_BERT"
+
+[target]
+thickness = 0.1
+
+[output]
+root_file = "output.root"
