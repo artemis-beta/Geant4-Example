@@ -1,6 +1,6 @@
 #include "Construction.hxx"
 
-TestDetectorConstruction::TestDetectorConstruction() {}
+TestDetectorConstruction::TestDetectorConstruction(const G4float target_dz): target_dz(target_dz) {}
 TestDetectorConstruction::~TestDetectorConstruction() {}
 G4VPhysicalVolume* TestDetectorConstruction::Construct() {
     G4RotationMatrix* rotation = 0;
@@ -28,7 +28,7 @@ G4VPhysicalVolume* TestDetectorConstruction::Construct() {
 
     // Create Target Volume of Beryllium
     G4Material* target_material = nist_manager->FindOrBuildMaterial("G4_Be");
-    G4VSolid* target_sold = new G4Box("TestTarget", 0.45 * m, 0.45 * m, 0.2 * m);
+    G4VSolid* target_sold = new G4Box("TestTarget", 0.45 * m, 0.45 * m, target_dz * m);
     G4LogicalVolume* target_logic = new G4LogicalVolume(target_sold, target_material, "targetLogic");
     G4VPhysicalVolume* target_phys = new G4PVPlacement(
         rotation,

@@ -1,6 +1,8 @@
 
     #setup the project
-    cmake_minimum_required(VERSION 3.12 FATAL_ERROR)
+    cmake_minimum_required(VERSION 3.21 FATAL_ERROR)
+    set(CMAKE_CXX_STANDARD 17)
+    set(CMAKE_CXX_STANDARD_REQUIRED True)
 
     project(basicProject)
 
@@ -16,6 +18,8 @@
 
     add_executable(MaterialTesting ${CMAKE_SOURCE_DIR}/MaterialTesting.cxx ${sources} ${headers})
     target_include_directories(MaterialTesting PRIVATE ${CMAKE_SOURCE_DIR}/include)
+    target_include_directories(MaterialTesting PUBLIC ${CMAKE_SOURCE_DIR}/third_party/tomlplusplus/include)
+    target_include_directories(MaterialTesting PUBLIC ${CMAKE_SOURCE_DIR}/third_party/taywee_args/)
     target_link_libraries(MaterialTesting ${Geant4_LIBRARIES})
 
     add_custom_target(basicProject DEPENDS MaterialTesting)

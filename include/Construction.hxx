@@ -13,10 +13,11 @@
 
 class TestDetectorConstruction : public G4VUserDetectorConstruction {
     public: 
-        TestDetectorConstruction();
+        TestDetectorConstruction(const G4float target_dz=0.1);
         ~TestDetectorConstruction();
         virtual G4VPhysicalVolume* Construct();
     private:
         G4LogicalVolume*  detector_logic;
+        const G4float target_dz;
         virtual void ConstructSDandField();
 };

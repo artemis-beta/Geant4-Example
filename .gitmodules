@@ -1,0 +1,6 @@
+[submodule "third_party/tomlplusplus"]
+	path = third_party/tomlplusplus
+	url = https://github.com/marzer/tomlplusplus.git
+[submodule "third_party/taywee_args"]
+	path = third_party/taywee_args
+	url = https://github.com/Taywee/args.git
