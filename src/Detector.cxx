@@ -28,6 +28,7 @@ G4bool TestSensitiveDetector::ProcessHits(G4Step* step, G4TouchableHistory* hist
     manager->FillNtupleIColumn(2, particle_position[1]);
     manager->FillNtupleIColumn(3, particle_position[2]);
     manager->FillNtupleIColumn(4, particle_charge);
+    manager->FillNtupleIColumn(5, track->GetParticleDefinition()->GetPDGEncoding());
     manager->AddNtupleRow(0);
 
     return true;
