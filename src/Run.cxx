@@ -15,6 +15,7 @@ void TestRunAction::BeginOfRunAction(const G4Run*){
     manager->CreateNtupleIColumn("fY");
     manager->CreateNtupleIColumn("fZ");
     manager->CreateNtupleIColumn("fCharge");
+    manager->CreateNtupleIColumn("fID");
     manager->FinishNtuple(0);
 }
 void TestRunAction::EndOfRunAction(const G4Run*){
